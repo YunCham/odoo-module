@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_owl_greet" name="Administracion Academica" sequence="10" />
+
+        <menuitem id="menu_owl_greet_dashboard" name="Dashboard" action="action_owl_greet_dashboard"
+            parent="menu_owl_greet" sequence="20" />
+        <menuitem id="menu_registers" name="Registros" parent="menu_owl_greet" sequence="30" />
+
+        <menuitem id="menu_branch_offices" name="Sucursales" action="action_owl_greet_dashboard"
+            parent="menu_registers" sequence="10" />
+        <menuitem id="menu_teachers" name="Profesores"
+            action="administracion_academica.profesor_action_window" parent="menu_registers"
+            sequence="20" />
+        <menuitem id="menu_students" name="Alumnos"
+            action="administracion_academica.alumno_action_window" parent="menu_registers"
+            sequence="30" />
+        <menuitem id="menu_subject" name="Materias"
+            action="administracion_academica.materia_action_window" parent="menu_registers"
+            sequence="40" />
+        <menuitem id="menu_workload" name="Carga Horaria"
+            action="administracion_academica.carga_horaria_rel_action_window"
+            parent="menu_registers" sequence="50" />
+        <menuitem id="menu_course" name="Cursos"
+            action="administracion_academica.curso_action_window" parent="menu_registers"
+            sequence="60" />
+        <menuitem id="menu_attorney" name="Apoderados"
+            action="administracion_academica.apoderado_action_window" parent="menu_registers"
+            sequence="70" />
+
+        <menuitem id="menu_inscription" name="Inscripcion"
+            action="administracion_academica.inscripcion_action_window" parent="menu_owl_greet"
+            sequence="40" />
+
+        <menuitem id="menu_pagos" name="Pagos" parent="menu_owl_greet" sequence="50" />
+        <menuitem id="menu_mensualidades" name="Mensualidades"
+            action="administracion_academica.mensualidad_action_window" parent="menu_pagos"
+            sequence="10" />
+        <menuitem id="menu_costo_mensualidad" name="Costo de mensualidad"
+            action="administracion_academica.costo_mensualidad_action_window" parent="menu_pagos"
+            sequence="20" />
+
+        <menuitem id="menu_notas" name="Notas"
+            action="administracion_academica.calificacion_action_window" parent="menu_owl_greet"
+            sequence="60" />
+
+        <menuitem id="menu_gestion" name="Gestiones" parent="menu_owl_greet" sequence="70" />
+        <menuitem id="menu_gestiones" name="Gestión"
+            action="administracion_academica.gestion_action_window" parent="menu_gestion"
+            sequence="10" />
+        <menuitem id="menu_periodos" name="Periodos"
+            action="administracion_academica.periodo_action_window" parent="menu_gestion"
+            sequence="20" />
+        <menuitem id="menu_tipo_periodos" name="Tipo de periodos"
+            action="administracion_academica.tipo_periodo_action_window" parent="menu_gestion"
+            sequence="30" />
+
+
+    </data>
+</odoo>

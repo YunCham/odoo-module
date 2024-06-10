@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="administracion_academica.calificacion_list" model="ir.ui.view">
+            <field name="name">administracion academica calificacion list</field>
+            <field name="model">administracion_academica.calificacion</field>
+            <field name="arch" type="xml">
+                <tree string="Calificaciones">
+                    <field name="alumno_id"/>
+                    <field name="nombre_curso"/>              
+                </tree>
+            </field>
+        </record>
+
+        <record id="administracion_academica.calificacion_form" model="ir.ui.view">
+            <field name="name">administracion academica calificacion form</field>
+            <field name="model">administracion_academica.calificacion</field>
+            <field name="arch" type="xml">
+                <form string="calificacion"> 
+                    <group>
+                        <field name="alumno_id"/>
+                        <field name="curso_materia_id"/>
+                        <field name="descripcion"/>
+                        <field name="nota"/>
+                    </group>
+                    <group>
+                        <field name="nombre_curso" />
+                        <field name="nombre_materia"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+       
+        <record id="administracion_academica.calificacion_action_window" model="ir.actions.act_window">
+            <field name="name">Calificaciones</field>
+            <field name="res_model">administracion_academica.calificacion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

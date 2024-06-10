@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="administracion_academica.apoderado_list" model="ir.ui.view">
+            <field name="name">administracion academica apoderado list</field>
+            <field name="model">administracion_academica.apoderado</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="carnet_identidad"/>
+                    <field name="correo_electronico"/>
+                    <field name="telefono"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="administracion_academica.apoderado_form" model="ir.ui.view">
+            <field name="name">administracion academica apoderado form</field>
+            <field name="model">administracion_academica.apoderado</field>
+            <field name="arch" type="xml">
+                <form>
+                   <group>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="apellidos"/>
+                            <field name="carnet_identidad"/>
+                        </group>
+                        <group>
+                            <field name="telefono"/>
+                            <field name="direccion"/>
+                            <field name="correo_electronico"/>
+                        </group>
+                    </group>
+                    <group>
+                       <field name="alumno"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+       
+        <record id="administracion_academica.apoderado_action_window" model="ir.actions.act_window">
+            <field name="name">Apoderado</field>
+            <field name="res_model">administracion_academica.apoderado</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>
